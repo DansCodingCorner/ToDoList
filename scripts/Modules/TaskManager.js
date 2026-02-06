@@ -1,11 +1,10 @@
 import { Task } from "./Task.js";
+import {taskManager} from "../main.js";
 
 export class TaskManager
 
 {
-    taskList;
-    instance;
-
+    taskList = [];
 
     constructor()
     {
@@ -17,18 +16,11 @@ export class TaskManager
     {
     }
 
-    createTaskManager()
-    {
-        if(taskManager === undefined || taskManager === null)
-        {
-        const instance = new this.constructor(taskManager);
-        }
-        return instance;
-    }
 
-    addTask(name, description, dueDate, priority)
+    addTaskToList(task)
     {
-        Task.createTask(name, description, dueDate, priority);
+        this.taskList.push(task);
+        alert(this.taskList.length);
     }
 
     modifyTask(Task)
