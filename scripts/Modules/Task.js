@@ -1,5 +1,5 @@
 import { TaskManager } from "./TaskManager.js";
-import { taskManager } from "../main.js"; 
+import { taskManagerInstance } from "../main.js"; 
 
 export class Task
 
@@ -27,12 +27,8 @@ export class Task
             let priority = prompt("Insert Priority Level (Low, Medium, High)", "[Priority]");
             
             let task = new Task(name, description, dueDate, priority);
-            taskManager.addTaskToList(task)
-
-            // const Task = new this.constructor(name, description, dueDate, priority);
-            // return Task;
+            taskManagerInstance.addTaskToList(task);
         }
-
         get getName()
         {
             return this.name;

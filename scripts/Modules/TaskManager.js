@@ -1,26 +1,32 @@
 import { Task } from "./Task.js";
-import {taskManager} from "../main.js";
 
 export class TaskManager
-
 {
     taskList = [];
+    instance;
 
     constructor()
     {
-        this.loadTaskList()
-
+        this.loadTaskList();
     }
 
+    static createTaskManager()
+    {
+        if(this.instance === undefined || this.instance === null)
+        {
+            this.instance = new TaskManager();
+        }
+        return this.instance;
+    }
+    
     loadTaskList()
     {
     }
 
-
     addTaskToList(task)
     {
-        this.taskList.push(task);
-        alert(this.taskList.length);
+        // this.taskList.push(task);
+        alert("Task Added");
     }
 
     modifyTask(Task)
@@ -33,4 +39,5 @@ export class TaskManager
 
     }
 }
+
 
