@@ -29,9 +29,24 @@
             <button id = "Clear_tasks_button">Clear Tasks</button>
         </div>
         <button id="showDialogButton">Show Modal</button>
-    <dialog id="myDialog">
-        <h2>Hello from the modal!</h2>
-        <p>This is a custom popup window using the dialog element.</p>
+    <dialog id="AddTaskDialog">
+        <h2>Create a new task!</h2>
+        <label for="TaskNameInput">Task Name</label><br>
+        <input type="text" id="TaskNameInput" name="TaskNameInput"><br>
+        
+        <label for="TaskDescInput">Task Description</label><br>
+        <input type="text" id="TaskDescInput" name="TaskDescInput"><br>
+
+        <label for="DueDate">Date:</label>
+        <input type="date" id="DueDate" name="DueDate"><br>
+
+        <select name="TaskPriority" id="TaskPriority">
+            <option value="1">Low</option>
+            <option value="2">Medium</option>
+            <option value="3">High</option>
+        </select><br>
+
+        <button id = "confirmAddTaskButton">Confirm</button>
         <button id="closeDialogButton">Close</button>
     </dialog>
 
