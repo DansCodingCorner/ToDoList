@@ -44,26 +44,42 @@ export class UIManager
 
     displayAddedTask(task)
     {
-        let tasksContainer = document.getElementById("tasks");
+        let tasksContainer = document.getElementById(task.getDayofWeek);
 
         let newTaskContainer = document.createElement("div");
 
+        newTaskContainer.classList.add("taskContainer");
+        newTaskContainer.id = task.getName;
+
         let newTaskName = document.createElement("p");
-        newTaskName.innerHTML = "Task Name: " + task.getName;;
+        newTaskName.innerHTML = task.getName;
         newTaskContainer.appendChild(newTaskName);
 
+
         let newTaskDescription = document.createElement("p");
-        newTaskDescription.innerHTML = "Task Description: " + task.getDescription;
+        newTaskDescription.innerHTML = task.getDescription;
         newTaskContainer.appendChild(newTaskDescription);
 
+
         let newTaskDueDate = document.createElement("p");
-        newTaskDueDate.innerHTML = "Due Date: " + task.getDayofWeek;
+        newTaskDueDate.innerHTML = task.getDayofWeek;
         newTaskContainer.appendChild(newTaskDueDate);
 
+
         let newTaskPriority = document.createElement("p");
-        newTaskPriority.innerHTML = "Priority: " + task.getPriority;
+        newTaskPriority.innerHTML = task.getPriority;
         newTaskContainer.appendChild(newTaskPriority);
 
+
         tasksContainer.appendChild(newTaskContainer);
+        tasksContainer.addEventListener("click", () => {
+            task.selectTask(task);
+        });
+    }
+
+    addClickedClass(task)
+    {
+        let selectedTask = document.getElementById(task.getName)
+        selectedTask.classList.add("clicked");
     }
 }

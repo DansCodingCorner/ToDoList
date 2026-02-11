@@ -66,13 +66,13 @@ export class Task
         get getDayofWeek()
         {
             let  daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
             let date = new Date(this.dueDate);
             let dayOfWeek = daysOfWeek[date.getDay()];
-            // const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-            // const dayName = daysOfWeek[date.getDay()];
-            // alert(dayName);
+
             return dayOfWeek;
         }
+
 
         set setDescription(description)
         {
@@ -87,6 +87,10 @@ export class Task
         set setPriority(priority)
         {
             this.priority = priority;
+        }
+
+        selectTask(task)
+        {
         }
 
         getDetails() 

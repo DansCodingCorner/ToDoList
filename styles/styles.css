@@ -1,6 +1,6 @@
 body
 {
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
 }
 h1
 {
@@ -9,27 +9,44 @@ h1
 
 #tasks
 {
-    border: 2px solid black;
+    border: 1px solid black;
     width: 90%;
     height: 300px;
     padding: 30px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
 }
 
 #tasks>div
 {
-    border: 1px solid gray;
+    border: 1px solid rgb(0, 0, 0);
     margin: 10px;
     padding: 10px;
     background-color: white;
     width: 80%;
-    height: 200px;
+    height: 250px;
+    border-radius: 5px;
 }
 
 #buttons_container
 {
     justify-self: center;
+}
+
+.taskContainer
+{
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(67, 178, 234);
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    line-height: 5px;
+    border-radius: 5px;
+}
+.taskContainer:hover
+{
+    background-color: rgb(100, 188, 233);
+    cursor: pointer;
 }
