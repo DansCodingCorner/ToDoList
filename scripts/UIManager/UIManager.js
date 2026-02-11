@@ -1,3 +1,5 @@
+import { Task } from "../Modules/Task.js";
+
 export class UIManager
 {
     static instance;
@@ -21,6 +23,13 @@ export class UIManager
         this.closeTaskDialogButton.addEventListener("click", () => {
             this.dialog.close();
         });
+
+        this.confirmAddTasskButton.addEventListener("click", () => {
+            Task.createTask();
+            this.dialog.close();
+        });
+
+
         
     }
     
@@ -33,8 +42,28 @@ export class UIManager
         return this.instance;
     }
 
-    displayAddTask()
+    displayAddedTask(task)
     {
+        let tasksContainer = document.getElementById("tasks");
 
+        let newTaskContainer = document.createElement("div");
+
+        let newTaskName = document.createElement("p");
+        newTaskName.innerHTML = "Task Name: " + task.getName;;
+        newTaskContainer.appendChild(newTaskName);
+
+        let newTaskDescription = document.createElement("p");
+        newTaskDescription.innerHTML = "Task Description: " + task.getDescription;
+        newTaskContainer.appendChild(newTaskDescription);
+
+        let newTaskDueDate = document.createElement("p");
+        newTaskDueDate.innerHTML = "Due Date: " + task.getDayofWeek;
+        newTaskContainer.appendChild(newTaskDueDate);
+
+        let newTaskPriority = document.createElement("p");
+        newTaskPriority.innerHTML = "Priority: " + task.getPriority;
+        newTaskContainer.appendChild(newTaskPriority);
+
+        tasksContainer.appendChild(newTaskContainer);
     }
 }

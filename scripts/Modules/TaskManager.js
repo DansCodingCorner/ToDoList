@@ -25,8 +25,7 @@ export class TaskManager
 
     addTaskToList(task)
     {
-        // this.taskList.push(task);
-        alert("Task Added");
+        this.taskList.push(task);
     }
 
     modifyTask(Task)

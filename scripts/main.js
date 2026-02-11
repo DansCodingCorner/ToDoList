@@ -12,6 +12,5 @@ export const taskManagerInstance = TaskManager.createTaskManager()
 //create the UIManager
 export const uiManager = UIManager.createUIManager();
 
-
 //Create the Database Manager 
 export const databaseManager = DatabaseManager.createDatabaseManager();
