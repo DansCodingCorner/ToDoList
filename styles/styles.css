@@ -44,7 +44,6 @@ button
 {
     margin: 5px;
     padding: 5px;
-    background-color: rgb(67, 178, 234);
     font-size: 12px;
     transition: background-color 0.3s ease;
     line-height: 5px;
@@ -52,11 +51,42 @@ button
 }
 .taskContainer:hover
 {
-    background-color: rgb(100, 188, 233);
     cursor: pointer;
+}
+
+.lowPriority
+{
+    background-color: rgb(67, 178, 234);
+}
+
+.lowPriority:hover
+{
+    background-color: rgb(133, 206, 242);
+}
+
+.mediumPriority
+{
+    background-color: rgb(168, 201, 60);
+
+}
+
+.mediumPriority
+{
+    background-color: rgb(163, 183, 95);
+
+}
+
+.highPriority
+{
+    background-color: rgb(175, 22, 35);
+}
+
+.highPriority:hover
+{
+    background-color: rgb(200, 75, 87);
 }
 
 .clicked
 {
-    border: 2px solid red;
+    border: 2px solid rgb(60, 225, 38);
 }

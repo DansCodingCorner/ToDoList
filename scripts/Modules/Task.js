@@ -9,6 +9,7 @@ export class Task
         description;
         dueDate;
         priority;
+        id;
 
 
         constructor(name, description, dueDate, priority)
@@ -17,6 +18,7 @@ export class Task
             this.description = description;
             this.dueDate = dueDate;
             this.priority = priority;
+            this.id = (Math.random() * 100000).toString(); 
         }
 
 
@@ -71,6 +73,11 @@ export class Task
             let dayOfWeek = daysOfWeek[date.getDay()];
 
             return dayOfWeek;
+        }
+
+        get getElementById()
+        {
+            return this.id;
         }
 
 
