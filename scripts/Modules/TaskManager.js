@@ -1,4 +1,5 @@
  import { Task } from "./Task.js";
+ import {uiManager} from"../main.js";
 
 export class TaskManager
 {
@@ -28,6 +29,18 @@ export class TaskManager
         this.taskList.push(task);
     }
 
+    removetaskFromTaskList(taskID)
+    {
+        for(let taskIndex = 0 ; taskIndex < this.taskList ; taskIndex ++)
+        {
+            
+            if(this.taskList[taskIndex].id == taskID)
+            {
+                this.taskList.splice(taskID, 1);
+            }
+        }
+    }
+
     modifyTask(Task)
     {
 
@@ -45,7 +58,8 @@ export class TaskManager
             {
                 if(this.taskList[taskIDIndex].id == selectedTaskId)
                 {
-                    alert("deleted selected task");
+                    this.removetaskFromTaskList(selectedTaskId);
+                    uiManager.removeTaskContainer(selectedTaskId)
                 }
             }
         }

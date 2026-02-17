@@ -69,6 +69,7 @@ export class UIManager
 
         this.removeTaskConfirmButton.addEventListener('click', () => {
             taskManagerInstance.deleteTasks();
+            this.removeTaskDiaalog.close();
         });
     }
 
@@ -116,6 +117,17 @@ export class UIManager
         });
 
         tasksContainer.appendChild(newTaskContainer);
+    }
+
+    removeTaskContainer(selectedTaskId)
+    {
+        let taskElementToRemove = document.getElementById(selectedTaskId);
+
+        if(taskElementToRemove)
+        {
+            taskElementToRemove.remove();
+        }
+        
     }
 
     static addClickedClass(elementID)
