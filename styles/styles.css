@@ -7,6 +7,11 @@ h1
     text-align: center;
 }
 
+button
+{
+    cursor: pointer;
+}
+
 #tasks
 {
     border: 1px solid black;
@@ -49,4 +54,9 @@ h1
 {
     background-color: rgb(100, 188, 233);
     cursor: pointer;
+}
+
+.clicked
+{
+    border: 2px solid red;
 }

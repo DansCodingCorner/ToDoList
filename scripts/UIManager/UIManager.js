@@ -73,13 +73,23 @@ export class UIManager
 
         tasksContainer.appendChild(newTaskContainer);
         tasksContainer.addEventListener("click", () => {
-            task.selectTask(task);
+            task.selectTask(newTaskContainer.id)
         });
+        
     }
 
-    addClickedClass(task)
+    static addClickedClass(elementID)
     {
-        let selectedTask = document.getElementById(task.getName)
-        selectedTask.classList.add("clicked");
+        let selectedTask = document.getElementById(elementID);
+
+        if(!selectedTask.classList.contains('clicked'))
+        {
+            selectedTask.classList.add("clicked");
+        }
+        else
+        {
+            selectedTask.classList.remove("clicked")
+        }
+
     }
 }

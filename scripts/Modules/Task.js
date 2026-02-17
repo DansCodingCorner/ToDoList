@@ -89,8 +89,9 @@ export class Task
             this.priority = priority;
         }
 
-        selectTask(task)
+        selectTask(taskID)
         {
+            UIManager.addClickedClass(taskID);
         }
 
         getDetails() 
