@@ -1,7 +1,24 @@
+
+.fredoka-font 
+{
+  font-family: "Fredoka", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 body
 {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;    
     background-color: rgb(255, 255, 255);
 }
+
 h1
 {
     text-align: center;
@@ -9,30 +26,52 @@ h1
 
 button
 {
+    font-family: "Fredoka", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
     cursor: pointer;
+
+    border: none;
+    height: 35px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 0px 20px;
+}
+
+
+#Remove_TaskButton
+{
+    background-color:coral;
+}
+
+#confirmAddTaskButton, #confirmDeleteTasksButton, #Add_tasks_button
+{
+    background-color: aqua;
 }
 
 #tasks
-{
-    border: 1px solid black;
-    width: 90%;
-    height: 300px;
-    padding: 30px;
+{   width: 100%;
+    min-height: 375px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
+    margin-bottom: 15px;
 }
 
 #tasks>div
 {
-    border: 1px solid rgb(0, 0, 0);
-    margin: 10px;
+    border-style: solid;
+    border-width: 0px 1px;
+    margin: 5px;
     padding: 10px;
     background-color: white;
-    width: 80%;
-    height: 250px;
-    border-radius: 5px;
+    width: 100%;
+    min-height: 250px;
+    text-align: center;
 }
 
 #buttons_container
@@ -84,6 +123,13 @@ button
 .highPriority:hover
 {
     background-color: rgb(200, 75, 87);
+}
+
+ 
+
+select, input
+{
+    margin-bottom: 10px;
 }
 
 .clicked

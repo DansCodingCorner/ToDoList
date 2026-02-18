@@ -67,12 +67,7 @@ export class Task
 
         get getDayofWeek()
         {
-            let  daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-
-            let date = new Date(this.dueDate);
-            let dayOfWeek = daysOfWeek[date.getDay()];
-
-            return dayOfWeek;
+            return this.dueDate;
         }
 
         get getElementById()

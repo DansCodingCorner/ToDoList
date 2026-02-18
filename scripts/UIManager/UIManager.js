@@ -55,7 +55,7 @@ export class UIManager
         });
 
         this.closeTaskDialogButton.addEventListener("click", () => {
-            this.removeTaskDiaalog.close();
+            this.dialog.close();
         });
 
         this.confirmAddTasskButton.addEventListener("click", () => {
@@ -127,7 +127,6 @@ export class UIManager
         {
             taskElementToRemove.remove();
         }
-        
     }
 
     static addClickedClass(elementID)
